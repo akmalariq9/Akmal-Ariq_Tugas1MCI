@@ -1,7 +1,7 @@
 # **Akmal-Ariq_Tugas1MCI**
 Repository untuk Pengerjaan Tugas 1 Calon Admin Lab MCI (Manajemen Cerdas Informasi).
 
-# **Identitas**
+## **Identitas**
 | Nama                     | NRP        |
 | -------------------------| -----------| 
 | Akmal Ariq Romadhon      | 5025211188 |
