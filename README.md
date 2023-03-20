@@ -110,7 +110,7 @@ Tampilkan daftar nama, semester dan ipk berdasarkan ipk tertinggi tiap semester.
 ## **Penyelesaian Soal Nomor 5**
 Secara sederhana, output yang dihasilkan adalah IPK tertinggi dari tiap mahasiswa di semester yang berbeda dan diurutkans secara Ascending. kemudian apabila terdapat IPK yang sama, maka akan diurutkan berdasarkan nama secara Ascending juga. Berikut adalah code yang digunakan untuk menyelesaikan soal tersebut:
 
-```
+```SQL
 SELECT Nama, Semester, IPK
 FROM Mahasiswa CS1
 WHERE IPK = (
@@ -125,5 +125,59 @@ Dalam _code_ tersebut, digunakan _syntax_ `SELECT` dan `FROM` untuk mengambil da
 
 ![Soal 5](https://cdn.discordapp.com/attachments/1083730715113426985/1086620948674904134/image.png)
 
-# **Javascript**
-**Coming Soon**
+# **JavaScript**
+## **Soal Nomor 1**
+Buatkan program menggunakan Function Expression dengan JavaScript dengan tujuan menampilkan kalimat (“Saya Calon Admin MCI”) dengan delay 3000 ms lalu tampilkan nama anda.
+
+## **Penyelesaian Soal Nomor 1**
+Dalam soal nomor 1, _output_ yang diharapkan adalah string "Saya Calon Admin MCI" kemudian 3000ms kemudian dilanjutkan dengan "Nama". Berikut adalah _code_ yang digunakan untuk menyelesaikan soal tersebut:
+
+```JS
+var print = function(){
+  console.log("Saya Calon Admin MCI");
+  setTimeout(() => console.log("Akmal Ariq"), 3000);
+};
+
+print();
+```
+
+Dalam soal tersebut, dilakukan deklarasi variabel `print` yang berisi `function`. Dalam `function` tersebut, ditampilkan string "Saya calon Admin MCI" menggunakan _syntax_ `console.log`. Kemudian untuk menambahkan delay 3000ms, digunakan _syntax_ `setTimeout(() => console.log("Akmal Ariq"), 3000);`. _Syntax_ tersebut secara otomatis akan menampilkan string "Akmal Ariq" setelah 3000 milisecond. Terakhir, fungsi tersebut dijalankan dengan _syntax_ `print()`. Berikut adalah hasil dari _code_ tersebut:
+
+![soal1](https://media.discordapp.net/attachments/915560012842147851/1087451587364003892/image.png?width=1038&height=482)
+
+## **Soal Nomor 2**
+Buatlah 2 file dengan tujuan sebagai berikut:
+
+- File pertama berisikan fungsi aritmatika sederhana seperti penjumlahan, pengurangan, perkalian, pembagian
+- File kedua tampilkan hasil perhitungan berikut menggunakan modul dari file pertama : 4000 / 2 + 25 - 2
+## **Penyelesaian Soal Nomor 2**
+Dalam soal nomor 2, _output_ yang diharapkan adalah hasil perhitungan dari `4000 / 2 + 25 - 2` yang dihitung menggunakan fungsi pada file 1. Berikut adalah _code_ untuk menyelesaikan soal tersebut:<br><br>
+**File 1:**
+```JS
+function add(a,b){
+  return (a + b)
+}
+
+function substract (a,b){
+  return (a-b)
+}
+
+function divide (a,b){
+  return (a/b)
+}
+
+export { add, substract, divide };
+```
+
+Dalam file pertama, terdapat 3 fungsi yang dideklaraskan, yaitu `add`, `substract`, dan `divide`. Ketiga fungsi tersebut masing-masing memiliki 2 parameter, yaitu a dan b. Setiap fungsi juga mengembalikan _value_ sesuai dengan nama dan tugasnya, misalnya add yang mengembalikan `a+b` atau penjumlahan, substract yang mengembalikan `a-b` atau pengurangan, dan divide yang mengembalikan `a/b` atau pembagian. Kemudian, ketiga fungsi tersebut akan _di-export_ agar dapat digunakan pada file yang lain. _Syntax_ untuk _export_ menyesuaikan format dari versi Javascript, yang dalam kasus ini menggunakan format ES6.
+<br><br>**File 2:**
+```JS
+import { add, substract, divide } from './Operation.js'
+
+const result = substract(add(divide(4000, 2),25),2)
+console.log(result)`JS
+
+```
+File kedua ialah file utama yang akan dijalankan untuk mendapatkan _output_ sesuai yang diminta. Dalam file kedua, dilakukan _import_ fungsi _add, substract_ dan _divide_ dari file pertama atau dari file `operation.js` menggunakan syntax `import { add, substract, divide } from './Operation.js'`. Setelah itu, terdapat deklarasi variabel `result` yang didalamnya berisi `substract(add(divide(4000, 2),25),2)`. Operasi tersebut akan dijelaskan dari `divide(4000,2)` yang menghasilkan nilai 2000. kemudian dilanjutkan oleh operasi selanjutnya yaitu `add(2000,25)` yang menghasilkan nilai 2025. Terakhir dilakukan operasi `substract(2025,2)` yang menghasilkan nilai 2023. Setelah itu, dilakukan print dari hasil operasi dengan _syntax_ `console.log(result)`. Berikut adalah output dari code tersebut:
+
+![soal2](https://media.discordapp.net/attachments/915560012842147851/1087451387782238239/image.png?width=1142&height=452)
