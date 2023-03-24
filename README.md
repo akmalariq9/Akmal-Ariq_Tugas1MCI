@@ -185,6 +185,61 @@ File kedua ialah file utama yang akan dijalankan untuk mendapatkan _output_ sesu
 np.argwhere merupakan sebuah fungsi yang tersedia pada library numpy di bahasa pemrograman python. Fungsi tersebut akan mengembalikan sebuah array 2 dimensi yang berisikan index - index value pada array n-d yang tidak bernilai 0, lakukan pencarian secara mandiri untuk mengetahui lebih lanjut mengenai fungsi np.argwhere. Implementasikan fungsi tersebut pada bahasa pemrograman Javascript untuk input array 3 dimensi.
 
 ## **Penyelesaian Soal Nomor 3**
+Dalam soal tersebut, output yang diharapkan adalah _index_ dari elemen _array_ yang tidak bernilai 0. Berikut adalah code yang digunakan dalam menyelesaikan soal tersebut:
+```js
+const arr = 
+[
+  [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+  ],
+  [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+  ],
+  [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ],
+]
 
+function dim(arr) {
+  if (arr instanceof Array) {
+    return [arr.length].concat(dim(arr[0]));
+  } else {
+    return [];
+  }
+}
+
+function argwhere(arr) {
+  const res = [];
+  const shape = dim(arr);
+
+  for (let i = 0; i < shape[0]; i++) {
+    for (let j = 0; j < shape[1]; j++) {
+      for (let k = 0; k < shape[2]; k++) {
+        if (arr[i][j][k] !== 0) {
+          res.push([i, j, k]);
+        }
+      }
+    }
+  }
+  return res
+}
+
+console.log(argwhere(arr));
+```
+
+Code tersebut terdiri dari 3 bagian inti, yaitu `arr`, `dim`, dan `argwhere`. Bagian `arr` berfungsi sebaagi variabel untuk _input array_, yang pada soal diminta untuk _input array_ tiga dimensi. Kemudian bagian `dim` dengan `parameter arr` berfungsi untuk mendapatkan dimensi dari array `arr`. Jika `arr` merupakan _array_, maka fungsi akan mengembalikan _array_ berisi panjang array tersebut serta panjang dimensi-dimensi selanjutnya yang berada di dalam _array_. Jika `arr` bukan _array_, maka fungsi akan mengembalikan _array_ kosong. Terakhir, terdapat inti dari program ini, yaitu fungsi `argwhere` dengan parameter `arr`. Fungsi `argwhere(arr)` digunakan untuk mengembalikan _array_ dua dimensi yang berisikan _index value_ pada _array_ tiga dimensi yang tidak bernilai 0. Pertama, fungsi ini memanggil fungsi `dim(arr)` untuk mendapatkan dimensi dari _array_ `arr`. Selanjutnya, fungsi akan melakukan _looping_ pada setiap elemen dari _array_ menggunakan tiga variabel perulangan. Jika nilai elemen pada indeks [i][j][k] != 0, maka indeks [i][j][k] akan disimpan pada `variabel res`. Terakhir, fungsi akan _return_ `variabel res` yang berisi _index_ dari value yang bernilai != 0 pada _array_ tiga dimensi `arr`. Setelah itu, dilakukan print hasil menggunakan _syntax_ `console.log(argwhere(arr));`
 Berikut adalah output dari code tersebut:
+
 ![Soal3](https://cdn.discordapp.com/attachments/1083730715113426985/1088733034259419226/image.png)
+
+## **Soal Nomor 4**
+Implementasi Asynchronous dengan membuat minimal 5 target hidup yang ingin kalian raih di tahun 2023, bisa menggunakan salah satu dari ketiga macam Asynchronous , (Menggunakan ketiganya akan lebih baik).
+
+## **Penyelesaian Soal Nomor 4**
+_Coming soon._
