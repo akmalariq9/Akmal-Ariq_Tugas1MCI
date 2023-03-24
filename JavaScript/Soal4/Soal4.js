@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")(); //input pakai prompt-sy
+const prompt = require("prompt-sync")();
 
 const category = {
     Akademis: ["IP Semester 4 dan 5 diatas 3.5", "Menjadi salah satu Admin di LAB MCI", "Bisa survive di Praktikum Sistem Operasi"],
