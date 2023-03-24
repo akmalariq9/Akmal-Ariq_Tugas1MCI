@@ -175,9 +175,16 @@ Dalam file pertama, terdapat 3 fungsi yang dideklaraskan, yaitu `add`, `substrac
 import { add, substract, divide } from './Operation.js'
 
 const result = substract(add(divide(4000, 2),25),2)
-console.log(result)`JS
-
+console.log(result)
 ```
 File kedua ialah file utama yang akan dijalankan untuk mendapatkan _output_ sesuai yang diminta. Dalam file kedua, dilakukan _import_ fungsi _add, substract_ dan _divide_ dari file pertama atau dari file `operation.js` menggunakan syntax `import { add, substract, divide } from './Operation.js'`. Setelah itu, terdapat deklarasi variabel `result` yang didalamnya berisi `substract(add(divide(4000, 2),25),2)`. Operasi tersebut akan dijelaskan dari `divide(4000,2)` yang menghasilkan nilai 2000. kemudian dilanjutkan oleh operasi selanjutnya yaitu `add(2000,25)` yang menghasilkan nilai 2025. Terakhir dilakukan operasi `substract(2025,2)` yang menghasilkan nilai 2023. Setelah itu, dilakukan print dari hasil operasi dengan _syntax_ `console.log(result)`. Berikut adalah output dari code tersebut:
 
 ![soal2](https://media.discordapp.net/attachments/915560012842147851/1087451387782238239/image.png?width=1142&height=452)
+
+## **Soal Nomor 3**
+np.argwhere merupakan sebuah fungsi yang tersedia pada library numpy di bahasa pemrograman python. Fungsi tersebut akan mengembalikan sebuah array 2 dimensi yang berisikan index - index value pada array n-d yang tidak bernilai 0, lakukan pencarian secara mandiri untuk mengetahui lebih lanjut mengenai fungsi np.argwhere. Implementasikan fungsi tersebut pada bahasa pemrograman Javascript untuk input array 3 dimensi.
+
+## **Penyelesaian Soal Nomor 3**
+
+Berikut adalah output dari code tersebut:
+![Soal3](https://cdn.discordapp.com/attachments/1083730715113426985/1088733034259419226/image.png)
